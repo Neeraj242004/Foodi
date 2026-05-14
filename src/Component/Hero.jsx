@@ -20,7 +20,7 @@ const Hero = () => {
             </p>
 
             <a
-              href="#"
+              href="#reservation"
               className="inline-block bg-red-500 hover:bg-red-600 px-6 py-3 rounded-full cursor-pointer transition duration-300 transform hover:scale-110"
             >
               Book a Table
