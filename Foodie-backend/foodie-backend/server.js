@@ -18,6 +18,7 @@ app.use(express.json());
 
 app.use("/api/products", require("./routes/productRoutes"));
 app.use("/api/orders", orderRoutes);
+
 app.use("/api/reservations", reservationRoutes);
 
 app.get("/", (req, res) => {
