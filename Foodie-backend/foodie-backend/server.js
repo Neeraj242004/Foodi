@@ -5,7 +5,7 @@ const dotenv = require("dotenv");
 
 const connectDB = require("./config/db");
 const orderRoutes = require("./routes/orderRoutes");
-const reservationRoutes = require("./routes/reservationRoutes");
+const reservationRoutes = require("./routes/ReservationRoutes");
 
 dotenv.config();
 
