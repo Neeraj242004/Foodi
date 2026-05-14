@@ -4,11 +4,11 @@ const reservationSchema = new mongoose.Schema({
   date: String,
   time: String,
   partySize: String,
-  tableArea: String,
+  tableRef: String,
   fullName: String,
-  phone: String,
+  Phone: String,
   email: String,
   specialRequest: String,
 });
 
-module.exports = mongoose.model("reservation",reservationSchema);
+module.exports = mongoose.model("Reservation", reservationSchema);

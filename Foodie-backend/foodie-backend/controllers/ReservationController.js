@@ -1,15 +1,27 @@
 const Reservation = require("../models/Reservation");
 
 const createReservation = async (req, res) => {
-  const reservation = await Reservation.create(req.body);
+  try {
+    const reservation = await Reservation.create(req.body);
 
-  res.json(reservation);
+    res.status(201).json(reservation);
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
 };
 
 const getReservations = async (req, res) => {
-  const reservations = await Reservation.find();
+  try {
+    const reservations = await Reservation.find();
 
-  res.json(reservations);
+    res.json(reservations);
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
 };
 
 module.exports = {
