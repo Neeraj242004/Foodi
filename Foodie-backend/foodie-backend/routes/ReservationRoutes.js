@@ -1,14 +1,22 @@
-const express = require("express");
+const Reservation = require("../models/Reservation");
 
-const router = express.Router();
+const createReservation = async (req, res) => {
 
-const {
+  const reservation = await Reservation.create(req.body);
+
+  res.json(reservation);
+
+};
+
+const getReservations = async (req, res) => {
+
+  const reservations = await Reservation.find();
+
+  res.json(reservations);
+
+};
+
+module.exports = {
   createReservation,
   getReservations,
-} = require("../controllers/reservationController");
-
-router.post("/", createReservation);
-
-router.get("/", getReservations);
-
-module.exports = router;
+};
