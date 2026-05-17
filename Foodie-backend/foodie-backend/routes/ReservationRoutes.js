@@ -3,12 +3,12 @@ const express = require("express");
 const router = express.Router();
 
 const {
-  createReservation,
+  createReservation,            
   getReservations,
-} = require("../controllers/reservationController.js");
+} = require("../controllers/reservationController");
 
 router.post("/", createReservation);
 
 router.get("/", getReservations);
 
-module.exports = router;
+module.exports = router; 
