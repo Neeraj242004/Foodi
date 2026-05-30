@@ -5,7 +5,7 @@ const router = express.Router();
 const {
   createReservation,
   getReservations,
-} = require("../controllers/ReservationController");
+} = require("../controllers/reservationController");
 
 router.post("/", createReservation);
 
