@@ -28,7 +28,7 @@ const Menu = () => {
 
       try {
 
-        const res = await axios.get("http://localhost:5000/api/products");
+        const res = await axios.get(  "https://foodi-ivi5.onrender.com/api/products");
 
         console.log("API DATA:", res.data);
 
