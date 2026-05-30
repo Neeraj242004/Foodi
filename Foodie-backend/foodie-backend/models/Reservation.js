@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const reservationSchema = new mongoose.Schema({
   date: String,
   time: String,
-  partySize: String,
+  partySize: String,          
   tableRef: String,
   fullName: String,
   Phone: String,
